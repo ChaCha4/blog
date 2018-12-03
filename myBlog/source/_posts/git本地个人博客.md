@@ -1,11 +1,12 @@
 ﻿---
 title: 用hexo写个人博客
 date: 2018-09-15 21:21:23
+list_number: false
 tags: 
 - hexo 
 - git 
 - github
-- toc: true
+
 ---
 
 
