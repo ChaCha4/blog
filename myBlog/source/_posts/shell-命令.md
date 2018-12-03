@@ -41,4 +41,13 @@ tags:
 
 ## 将本地的项目存到git远端
 
-1、git远端新建一个同名仓库，里面什么都不放()
+1、git远端新建一个同名仓库，里面什么都不放(初始化的时候不要添加README.md文件)
+2、进入到本地的项目文件夹，打开终端，执行 git init 操作(初始化本地文件夹为 git 仓库)
+3、执行 `git add .`
+4、执行 `git commit -m '版本留言'`
+5、执行 git push 会报错，没有远端目标
+6、执行 git remote add origin git@github.com:ChaCha4/blog.git 设置远端目标
+7、执行 git push -u origin master 将本地仓库推送到设置好的远端仓库
+8、以后想修改的话直接执行 git 三步
+
+
