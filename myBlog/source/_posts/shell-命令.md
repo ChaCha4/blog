@@ -110,7 +110,23 @@ tags:
 
 ## git 版本回退
 
-**git log --pretty=oneline**查看版本信息，参数的意思是在一行显示。
+1.**git log --pretty=oneline**查看版本信息，参数的意思是在一行显示。
+
+2.使用 **git reset --hard 版本号前四位** 实现本地版本回退.
+
+3.使用 **git push -f** 强制推送到远端，想要回到之前的版本，使用 **git reflog --all** 查看之前的所有版本修改，找到对应的版本号
+
+4.使用 **git reset --hard 版本号前四位**实现版本跳转 5.执行 **git push**推送到远端
+
+## node 相关
+
+将 node 添加到 linux 的环境变量
+
+1.找到 node 路径
+/home/zzt/.nvm/versions/node/v9.2.0/bin
+
+2.打开.bashrc
+添加 export PATH="\$PATH:/home/zzt/.nvm/versions/node/v9.2.0/bin" 到最后一行保存 3.重启命令行
 
 ## git 分支操作
 
@@ -144,4 +160,10 @@ tags:
 
 ## 删除分支操作
 
-1.首先得切换到主分支。 2.**git branch -d 分支名**:删除本地分支 3.**git branch -d -r origin/分支名**：删除远端分支 4.删除分支之后，需使用 **git push origin :分支名**，提交到远端
+1.首先得切换到主分支。
+
+2.**git branch -d 分支名**:删除本地分支
+
+3.**git branch -d -r origin/分支名**：删除远端分支
+
+4.删除分支之后，需使用 **git push origin :分支名**，提交到远端
