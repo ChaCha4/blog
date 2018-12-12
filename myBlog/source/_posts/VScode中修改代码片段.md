@@ -1,5 +1,5 @@
 ---
-title: ECMAScript 6|2015|新 js
+title: VScode中修改代码片段
 date: 2018-12-11 09:28:01
 categories:
   - 参考手册

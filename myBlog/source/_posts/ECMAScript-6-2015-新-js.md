@@ -203,3 +203,45 @@ console.log(CreateCat.prototype);
 6.**类模块内自动都是严格模式。**
 
 ## class 继承
+
+**构造函数的继承**
+
+```js
+function Animal(name) {
+  this.name = name;
+}
+Animal.prototype.sayName = function() {
+  console.log(this.name);
+};
+const cat = new Animal('猫');
+console.log(cat);
+// 如果 Cat 构造函数要继承 cat的所有的属性和方法
+function Cat() {}
+Cat.prototype = cat;
+```
+
+**class 类的继承**
+
+```js
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+  sayName() {
+    console.log(this.name);
+  }
+}
+const cat = new Animal('猫');
+console.log(cat);
+
+class Cat extends Animal {
+  constructor(name) {
+    super(name);
+  }
+  sing() {
+    console.log('miao');
+  }
+}
+```
+
+**super(name)**:用 Animal 创建实例化对象，但是将 this 指向变成 Cat 的实例化类，给 Cat 的实例化类里面添加了 Animal 内的属性和方法。
