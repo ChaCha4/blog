@@ -9,7 +9,7 @@ tags:
 
 ## 前言
 
-之前的处理都是直接操作 `dom` 节点，像 react vue angular 都是虚拟 dom ，只要数据变虚拟 dom 结构就改变，最后将虚拟的 dom 转化成正真的。
+之前的处理都是直接操作 `dom` 节点，像 react vue angular 都是虚拟 dom ，只要数据变虚拟 dom 结构就改变，最后将虚拟的 dom 转化成真正的。
 
 ## 单页面应用
 
@@ -33,7 +33,7 @@ tags:
 
 5.**弹出的页面就是访问了该服务器下的 index.html**(该 html 的模板就是项目下 public 内的 index.html)
 
-6.修改 src 下的内容，写出自己的 hello world
+6.修改 src 下的内容，写出自己的 hello world。
 
 7.**删除一些没有用的文件**
 
@@ -47,7 +47,11 @@ tags:
     import logo from './logo.svg';
     import './App.css';
 
-8.把 App.js 文件里的**return**内的所有内容删除,替换成 `<div>hello world</div>`，**或者将 App.js 里的内容全部删除，输入 rcc 之后 tab 一键补充一个新的。**
+8.把 App.js 文件里的**return**内的所有内容删除,替换成
+
+    <div>hello world</div>
+
+或者将 App.js 里的内容全部删除，输入 **rcc** 之后 tab 一键补充一个新的。
 
 ### react 内的 jsx 语法
 
@@ -61,13 +65,19 @@ tags:
 
 5.**想要在 jsx 内使用 js 需要将 js 使用大括号包裹**
 
-6.**jsx 内使用 style 属性**： `style = {{width:'200px'}}`
+6.**jsx 内使用 style 属性**：
 
-7.**jsx 的属性不能写成关键字** class -> className for -> htmlFor
+    style = {{width:'200px'}}
+
+7.**jsx 的属性不能写成关键字**
+
+    class -> className for -> htmlFor
 
 ### 组件的样式
 
-1.**行内样式**，但是必须写成 style = {{width:'200px'}}
+1.**行内样式**，但是必须写成
+
+    style = {{width:'200px'}}
 
 2.**外链样式** 直接新建 css 文件，当做模块导入即可 import '**路径需要写后缀名**'。
 
@@ -77,7 +87,9 @@ tags:
 
 1.**网上的图片可以直接使用**
 
-2.**引入本地的图片**:将图片当做模块导入到对应的组件内`import pic from './img/1.jpeg'`
+2.**引入本地的图片**:将图片当做模块导入到对应的组件内
+
+    import pic from './img/1.jpeg'
 
 ### react 的 state(状态)
 
@@ -109,7 +121,11 @@ tags:
 
 4.**当修改了 state 时 render 会重新执行**,只会重新渲染跟改变的 state 相关的 html。
 
-5．**组件内部事件如何传参** 假如我定义了一个函数是 changeModal，该函数内有一个参数，想给组件的某个 html 绑定事件,调用的时候传参，不能写成 onClick={this.changeModal(true)}，要写成 **onClick={() => {this.changeModal(true)}}**，因为 onClick 的属性值必须是一个函数，而该函数内部想要使用 this 的话必须定义成箭头函数。
+5．**组件内部事件如何传参** 假如我定义了一个函数是 changeModal，该函数内有一个参数，想给组件的某个 html 绑定事件,调用的时候传参，不能写成
+
+    onClick={this.changeModal(true)}
+
+要写成 **onClick={() => {this.changeModal(true)}}**，因为 onClick 的属性值必须是一个函数，而该函数内部想要使用 this 的话必须定义成箭头函数。
 
 6.react 组件中的 setInterval 当我们需要在页面刷新的时候，使用 setInterval 更新 state。
 
@@ -186,11 +202,3 @@ Card.propTypes = {
 1.在父组件中定义修改 state 的方法
 
 2.将该方法传递给需要修改的子组件
-
-### react 路由(页面跳转) react-router
-
-**react 项目是单页面应用，要实现页面提转的话需要依赖 react 的 react-router-dom 包来实现**,官网参考链接 react-router
-
-1.在项目下安装 **react-router-dom**:`npm i react-router-dom`
-
-2.在 App.js 内引入 **BrowserRouter** 。`import { BroswerRouter } from 'react-router-dom` BroswerRouter 是 react-router-dom 包内的一个 react 组件，该组件的作用是
